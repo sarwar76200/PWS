@@ -27,6 +27,7 @@
                 <option value="Female">Female</option>
                 <option value="Other">Other</option>
             </select>
+
             
             <br>
         
@@ -63,6 +64,13 @@
             <div class="mainBar">
 
 
+            </div>
+
+            <div class="rightSideBar">
+
+            </div>
+            <div>
+                
             </div>
 
         </div>
