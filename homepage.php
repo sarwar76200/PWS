@@ -15,10 +15,10 @@
 
     <nav>
         <a href="#">Home</a>
-        <a href="#">View All Prescription</a>
+        <a href="ViewAllPrescription.php">View All Prescription</a>
         <a href="drugsDatabase.php">Drug Database</a>
         <a href="sms.php">SMS</a>
-        <a href="#">Appointment</a>
+        <a href="appointment.php">Appointment</a>
         <div class="animation start-home"></div>
     </nav>
 

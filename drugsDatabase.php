@@ -3,7 +3,7 @@
     include("PHPConnect.php");
 
 
-    $query = "SELECT * FROM drugs";
+    $query = "SELECT * FROM drugs LIMIT 500";
     $final_query = mysqli_query($conn,$query);
     $count = mysqli_num_rows($final_query);
 
@@ -28,10 +28,10 @@
     <header>
         <nav>
             <a href="homepage.php">Home</a>
-            <a href="#">View All Prescription</a>
+            <a href="ViewAllPrescription.php">View All Prescription</a>
             <a href="drugsDatabase.php">Drugs Database</a>
             <a href="sms.php">SMS</a>
-            <a href="#">Appointment</a>
+            <a href="appointment.php">Appointment</a>
             <div class="animation start-home"></div>
         </nav>
     </header>
@@ -61,8 +61,9 @@
                     $Pharmaceutical = $row['Pharmaceutical'];
                     $Price = $row['Unit_Price'];
 
+                    
                     echo "<tbody><tr>
-                    <td>".$row.['ID']."</td>
+                    <td>".$row['ID']."</td>
                     <td>".$row['Brand_Name']."</td>
                     <td>".$row['Generic_Name']."</td>
                     <td>".$row['Dosage_Type']."</td>
