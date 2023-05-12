@@ -23,16 +23,6 @@
     </nav>
 
 
-    <!-- <div class="menuBar">
-        <div class="menuText"><a href="" class="menu">Home</a></div>
-        <div class="menuText"><a href="" class="menu">View All Prescription</a></div>
-        <div class="menuText"><a href="" class="menu">Drug Database</a></div>
-        <div class="menuText"><a href="" class="menu">SMS</a></div>
-        <div class="menuText"><a href="" class="menu">Appointment</a></div> 
-        
-    </div> -->
-
-
     <form action="">
         <div class="formHead">
 
@@ -215,9 +205,34 @@
 
             <div class="mainBar">
 
-                <table>
+                <div>
+                    <table>
+                        <tr>
+                            <th>No.</th>
+                            <th>Brand</th>
+                            <th>Dose</th>
+                            <th>Instruction</th>
+                            <th>Duration</th>
+                        </tr>
+                        <tr class="mainBarTr">
+                            <td><input type="text" name="no1" class="no" id="no1" value="1"></td>
+                            <td>
+                                <input type="text" name="brand1" class="brand" id="search" placeholder="Medicine........." autocomplete="off">
+                                <div class="MedicineList" id="MedicineList"></div>
+                            </td>                            
+                            <td><input type="text" name="dose1" class="dose" id="search" placeholder="Dose........." autocomplete="off"></td>                            
+                            <td><input type="text" name="instruction1" class="instruction" id="search" placeholder="Instruction........." autocomplete="off"></td>                            
+                            <td><input type="text" name="duration1" class="duration" id="search" placeholder="Duration........." autocomplete="off"></td>                            
+                        </tr>
+                        <!-- <div class="MedicineList" id="MedicineList"></div> -->
+                        <!-- <div id="tableData"></div> -->
 
-                </table>
+                        
+                        
+                        
+
+                    </table>
+                </div>
 
             </div>
 
@@ -225,6 +240,73 @@
 
 
     </form>
+
+
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            /* Autocomplete Textbox */
+
+            $("#search").keyup(function(){   //this is normal code         
+
+            var Medicine = $(this).val();
+
+            if(Medicine != ''){
+                $.ajax({
+                    url: "loadMedicine.php",
+                    method: "POST",
+                    data: {Drugs : Medicine},
+                    success: function(data){
+                    console.log(data);
+                    $("#MedicineList").fadeIn("fast").html(data);
+                    }
+                }); 
+            }else{
+                $("#MedicineList").fadeOut();
+                $("#tableData").html("");
+            }
+
+
+            
+            // this code for when click search box and show suggestion and click outside of the box hide suggestion
+            
+            // $(document).on('click','#search',function(){  
+            // var Medicine = $(this).val();
+
+            // $.ajax({
+            //     url: "loadMedicine.php",
+            //     method: "POST",
+            //     data: { Drugs: Medicine},
+            //     success: function(data){
+            //     console.log(data);
+            //     $("#MedicineList").fadeIn("fast").html(data);
+            //     }
+            // }); 
+
+
+
+
+
+            $(document).on('click','',function(){
+                $("#MedicineList").fadeOut("fast");
+                $("#tableData").html("");
+            });
+
+        });
+
+
+        // Autocomplete List Click Code
+        $(document).on('click','#MedicineList li',function(){
+        $('#search').val($(this).text());
+        $("#MedicineList").fadeOut();
+        });
+
+        });
+    // });
+    </script>
 
 
 </body>
