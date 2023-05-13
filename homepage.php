@@ -217,15 +217,44 @@
                         <tr class="mainBarTr">
                             <td><input type="text" name="no1" class="no" id="no1" value="1"></td>
                             <td>
-                                <input type="text" name="brand1" class="brand" id="search" placeholder="Medicine........." autocomplete="off">
+                                <input type="text" name="brand1" class="brand" id="brand1" placeholder="Medicine........." autocomplete="off">
                                 <div class="MedicineList" id="MedicineList"></div>
                             </td>                            
-                            <td><input type="text" name="dose1" class="dose" id="search" placeholder="Dose........." autocomplete="off"></td>                            
-                            <td><input type="text" name="instruction1" class="instruction" id="search" placeholder="Instruction........." autocomplete="off"></td>                            
-                            <td><input type="text" name="duration1" class="duration" id="search" placeholder="Duration........." autocomplete="off"></td>                            
+                            <td>
+                                <input type="text" name="dose1" class="Dose" id="dose1" placeholder="Dose........." autocomplete="off">
+                                <div class="DoseList" id="DoseList"></div>
+                            </td>                            
+                            <td>
+                                <input type="text" name="instruction1" class="Instruction" id="instruction1" placeholder="Instruction........." autocomplete="off">
+                                <div class="InstructionList" id="InstructionList"></div>
+                            </td>                            
+                            <td>
+                                <input type="text" name="duration1" class="Duration" id="duration1" placeholder="Duration........." autocomplete="off">
+                                <div class="DurationList" id="DurationList"></div>
+                            </td>                            
                         </tr>
-                        <!-- <div class="MedicineList" id="MedicineList"></div> -->
-                        <!-- <div id="tableData"></div> -->
+
+
+                        <tr class="mainBarTr">
+                            <td><input type="text" name="no1" class="no" id="no1" value="2"></td>
+                            <td>
+                                <input type="text" name="brand1" class="brand" id="brand1" placeholder="Medicine........." autocomplete="off">
+                                <div class="MedicineList" id="MedicineList"></div>
+                            </td>                            
+                            <td>
+                                <input type="text" name="dose1" class="Dose" id="dose1" placeholder="Dose........." autocomplete="off">
+                                <div class="DoseList" id="DoseList"></div>
+                            </td>                            
+                            <td>
+                                <input type="text" name="instruction1" class="Instruction" id="instruction1" placeholder="Instruction........." autocomplete="off">
+                                <div class="InstructionList" id="InstructionList"></div>
+                            </td>                            
+                            <td>
+                                <input type="text" name="duration1" class="Duration" id="duration1" placeholder="Duration........." autocomplete="off">
+                                <div class="DurationList" id="DurationList"></div>
+                            </td>                            
+                        </tr>
+                        
 
                         
                         
@@ -244,69 +273,7 @@
 
 
     <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript">
-
-        $(document).ready(function(){
-
-            /* Autocomplete Textbox */
-
-            $("#search").keyup(function(){   //this is normal code         
-
-            var Medicine = $(this).val();
-
-            if(Medicine != ''){
-                $.ajax({
-                    url: "loadMedicine.php",
-                    method: "POST",
-                    data: {Drugs : Medicine},
-                    success: function(data){
-                    console.log(data);
-                    $("#MedicineList").fadeIn("fast").html(data);
-                    }
-                }); 
-            }else{
-                $("#MedicineList").fadeOut();
-                $("#tableData").html("");
-            }
-
-
-            
-            // this code for when click search box and show suggestion and click outside of the box hide suggestion
-            
-            // $(document).on('click','#search',function(){  
-            // var Medicine = $(this).val();
-
-            // $.ajax({
-            //     url: "loadMedicine.php",
-            //     method: "POST",
-            //     data: { Drugs: Medicine},
-            //     success: function(data){
-            //     console.log(data);
-            //     $("#MedicineList").fadeIn("fast").html(data);
-            //     }
-            // }); 
-
-
-
-
-
-            $(document).on('click','',function(){
-                $("#MedicineList").fadeOut("fast");
-                $("#tableData").html("");
-            });
-
-        });
-
-
-        // Autocomplete List Click Code
-        $(document).on('click','#MedicineList li',function(){
-        $('#search').val($(this).text());
-        $("#MedicineList").fadeOut();
-        });
-
-        });
-    // });
-    </script>
+    <script type="text/javascript" src="js/homepage.js"></script>
 
 
 </body>
