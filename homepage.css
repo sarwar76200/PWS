@@ -390,11 +390,20 @@ nav a:nth-child(5):hover~.animation{
     background: #d0e4f4;
 }
 
-#tableData{
+
+
+
+/* #tableData{
     background: #bcbcbc;
     height: 50px;
     width: 150px;
-}
+} */
+
+/* .med{
+    background-color: #a4bc1a;
+    height: 200px;
+    width: 700px;
+} */
 
 
 /* mainBAr design end here */
