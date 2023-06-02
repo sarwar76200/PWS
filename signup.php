@@ -84,9 +84,9 @@
                                         $dob = $_POST['dob'];
                                         $pass = gen_hash($_POST['pass']);
 
-                                        $query = "INSERT INTO `users` VALUES ('$fname', '$lname', '$dob', '$user', '$email', '$pass')";
+                                        $query = "INSERT INTO `user` VALUES ('$fname', '$lname', '$dob', '$user', '$email', '$pass')";
                                         try {
-                                            $result = $PHPConnect->query($query);
+                                            $result = $conn->query($query);
                                         } catch (Exception $e) {
                                             echo "<p>User already exists</p>";
                                             exit(0);

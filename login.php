@@ -57,8 +57,8 @@
 									if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 										$user = $_POST['user'];
 										$pass = $_POST['pass'];
-										$query = "SELECT pass FROM `users` WHERE username = '$user'";
-										$result = $connection->query($query);
+										$query = "SELECT pass FROM `user` WHERE user = '$user'";
+										$result = $conn->query($query);
 										if ($result->num_rows == 0) {
 											echo '<p>No such user</p>';
 											exit(0);

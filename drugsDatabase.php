@@ -31,7 +31,7 @@
             <a href="ViewAllPrescription.php">View All Prescription</a>
             <a href="drugsDatabase.php">Drugs Database</a>
             <a href="sms.php">SMS</a>
-            <a href="appointment.php">Appointment</a>
+            <!-- <a href="appointment.php">Appointment</a> -->
             <div class="animation start-home"></div>
         </nav>
     </header>

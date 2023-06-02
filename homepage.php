@@ -1,7 +1,9 @@
+
 <?php
 
     error_reporting(0);
     include("PHPConnect.php");
+
 
     /**----------------------------------------------------------------------------------- 
     * This Code is show the value in RegNO field and auto increment value after SUBMIT 
@@ -22,7 +24,37 @@
 
 
 
-    if(isset($_POST['submit_btn'])){
+?>
+
+<?php
+
+    // error_reporting(0);
+    include("PHPConnect.php");
+
+    /**----------------------------------------------------------------------------------- 
+    * This Code is show the value in RegNO field and auto increment value after SUBMIT 
+    -------------------------------------------------------------------------------------*/
+    // $query = "SELECT * FROM patientdatabase ORDER BY RegNo DESC LIMIT 1";
+    // $result = mysqli_query($conn,$query);
+    // $row = mysqli_fetch_array($result);
+    // $last_RegNo = $row['RegNo'];
+
+    // if ($last_RegNo == " ")
+    // {
+    //     $patient_RegNo = 1; 
+    // }
+    // else
+    // {
+    //     $patient_RegNo = ($last_RegNo + 1);   
+    // }
+
+
+    // $Name = $Age =$Sex;
+
+    $Name = '';
+    $Age = '';
+
+    if(isset($_POST['submit_btn']) || isset($Name)){
 
         $Name = $_POST['name'];
         $Age = $_POST['age'];
@@ -34,19 +66,18 @@
 
 
         // echo 'Name : '.$Name.'<br>';
-        // echo $Age;
-        // echo $Sex;
-        // echo $Mobile;
-        // echo $Reg;
-        // echo $Address;
-        // echo $Date;
+        echo $Age;
+        echo $Sex;
+        echo $Mobile;
+        echo $Reg;
+        echo $Address;
+        echo $Date;
 
 
-        // $sql = "INSERT INTO patientdatabase(RegNo,Patient_Name,Age,Sex,Mobile,Address,Date) 
-        // VALUES('$Reg','$Name','$Age','$Sex','$Mobile','$Address','$Date')";
+        $sql = "INSERT INTO patientdatabase(RegNo,Patient_Name,Age,Sex,Mobile,Address,Date) 
+        VALUES('$Reg','$Name','$Age','$Sex','$Mobile','$Address','$Date')";
 
-        // $query1 = mysqli_query($conn,$sql);
-        // header("Refresh:0;");
+        
 
 
 
@@ -62,11 +93,17 @@
         $Cyanosis = $_POST['Cyanosis'];
         $Oedema = $_POST['Oedema'];
 
-
-        // echo $BP.'<br>';
-        // echo $Temp.'<br>';
-        // echo $Heart.'<br>';
-        // echo $Lungs.'<br>';
+        $BpUnit = $_POST['bpUnit'];
+        $PulseUnit = $_POST['pulseUnit'];
+        $TempUnit = $_POST['tempUnit'];
+        $SpO2Unit = $_POST['spO2Unit'];
+        $HeartUnit = $_POST['heartUnit'];
+        $LungsUnit = $_POST['lungsUnit'];
+        $AbdUnit = $_POST['abdUnit'];
+        $AnaemiaUnit = $_POST['anaemiaUnit'];
+        $JanudiceUnit = $_POST['janudiceUnit'];
+        $CyanosisUnit = $_POST['cyanosisUnit'];
+        $OedemaUnit = $_POST['oedemaUnit'];
 
 
         $ho = $_POST['H/O'];
@@ -76,6 +113,25 @@
             $HO .= " *".$ho2;
         }
 
+        
+
+        $sql1 = "INSERT INTO prescriptiontablehistory(BP,BP_Unit,Pulse,Pulse_Unit,Temp,Temp_Unit,SpO2,SpO2_Unit,Heart,Heart_Unit,Lungs,Lungs_Unit,Abd,Abd_Unit,Anaemia,Anaemia_Unit,Janusice,Janudice_Unit,Cyanosis,Cyanosis_Unit,Oedema,Oedema_Unit,HO,regNo) 
+        VALUES('$BP','$BpUnit','$Pulse','$PulseUnit','$Temp','$TempUnit','$SpO2','$SpO2Unit','$Heart','$HeartUnit','$Lungs','$LungsUnit','$Abd','$AbdUnit','$Anaemia','$AnaemiaUnit','$Janudice','$JanudiceUnit','$Cyanosis','$CyanosisUnit','$Oedema','$OedemaUnit','$HO','$Reg')";
+
+
+        
+
+        // echo $tempUnit.'<br>';
+        // echo $BP.'<br>';
+        // echo $BpUnit.'<br>';
+        // echo $Pulse.'<br>';
+        // echo $PulseUnit.'<br>';
+        // echo $Temp.'<br>';
+        // echo $TempUnit.'<br>';
+        // echo $Heart.'<br>';
+        // echo $HeartUnit.'<br>';
+        // echo $Lungs.'<br>';
+        // echo $LungsUnit.'<br>';
         // echo $HO;
 
 
@@ -86,10 +142,10 @@
         $Duration1 = $_POST['duration1'];
 
         echo $No1;
-        echo $Brand1;
-        echo $Dose1;
-        echo $Instruction1;
-        echo $Duration1;
+        // echo $Brand1;
+        // echo $Dose1;
+        // echo $Instruction1;
+        // echo $Duration1;
         
         
         $No2 = $_POST['no2'];
@@ -117,32 +173,28 @@
         $Dose5 = $_POST['dose5'];
         $Instruction5 = $_POST['instruction5'];
         $Duration5 = $_POST['duration5'];
+
+
+        
+        $sql2 = "INSERT INTO prescriptiontable(reg_no,Medicine,Dose,Instruction,Duration) 
+        VALUES('$Reg','$Brand1, $Brand2, $Brand3, $Brand4, $Brand5',
+                '$Dose1, $Dose2, $Dose3, $Dose4, $Dose5',
+                '$Instruction1, $Instruction2, $Instruction3, $Instruction4, $Instruction5',
+                '$Duration1, $Duration2, $Duration3, $Duration4, $Duration5')";
         
 
 
-        // for($i=1;$i<10;$i++){
-        //     echo $No.$i." ".$Brand.$i." ".$Dose.$i." ".$Instruction.$i." ".$Duration.$i."<br>";
-        // }
+        $query1 = mysqli_query($conn,$sql);
+        $query2 = mysqli_query($conn,$sql1);
+        $query3 = mysqli_query($conn,$sql2);
+        // header("Refresh:0;");
 
     }
 
 
 
 
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -181,6 +233,7 @@
     </nav>
 
 
+
     <form action="" method="post">
         <div class="formHead">
 
@@ -201,7 +254,7 @@
             <br>
 
             <label for="">Mobile &ensp;:</label>
-            <input type="text" class="name" name="mobile">
+            <input type="text" class="name" name="mobile" maxlength="11">
 
             <label for="">Reg No.:</label>
             <input type="text" class="age" name="reg" id="Reg" value="<?php echo $patient_RegNo ?>" readonly>
@@ -239,67 +292,67 @@
                         <tr>
                             <td class="oe_col">BP</td>
                             <td class="value_col"><textarea name="BP" class="value" id="" cols="0" rows="1">120/80</textarea></td>
-                            <td class="unit_col">mmHg</td>
+                            <td class="unit_col" ><input type="text" class="unit" name="bpUnit" id="" value="mmHg"></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">Pulse</td>
                             <td class="value_col"><textarea name="Pulse" class="value" id="" cols="0" rows="1"></textarea></td>
-                            <td class="unit_col">b/min</td>
+                            <td class="unit_col"><input type="text" class="unit" name="pulseUnit" id="" value="b/min"></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">Temp</td>
                             <td class="value_col"><textarea name="Temp" class="value" id="" cols="0" rows="1">98.6</textarea></td>
-                            <td class="unit_col"><sup>o</sup>F</td>
+                            <td class="unit_col"><input type="text" class="unit" name="tempUnit" id="" value= "°F" ></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">SpO<sub>2</sub></td>
                             <td class="value_col"><textarea name="SpO2" class="value" id="" cols="0" rows="1"></textarea></td>
-                            <td class="unit_col">%</td>
+                            <td class="unit_col"><input type="text" class="unit" name="spO2Unit" id="" value="%"></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">Heart</td>
                             <td class="value_col"><textarea name="Heart" class="value" id="" cols="0" rows="1">S1+S2+M0</textarea></td>
-                            <td class="unit_col"></td>
+                            <td class="unit_col"><input type="text" class="unit" name="heartUnit" id="" value=""></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">Lungs</td>
                             <td class="value_col"><textarea name="Lungs" class="value" id="" cols="0" rows="1">NAD</textarea></td>
-                            <td class="unit_col"></td>
+                            <td class="unit_col"><input type="text" class="unit" name="lungsUnit" id="" value=""></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">Abd</td>
                             <td class="value_col"><textarea name="Abd" class="value" id="" cols="0" rows="1">Soft, Non-Tender</textarea></td>
-                            <td class="unit_col"></td>
+                            <td class="unit_col"><input type="text" class="unit" name="abdUnit" id="" value=""></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">Anaemia</td>
                             <td class="value_col"><textarea name="Anaemia" class="value" id="" cols="0" rows="1"></textarea></td>
-                            <td class="unit_col"></td>
+                            <td class="unit_col"><input type="text" class="unit" name="anaemiaUnit" id="" value=""></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">Jaundice</td>
                             <td class="value_col"><textarea name="Jaundice" class="value" id="" cols="0" rows="1"></textarea></td>
-                            <td class="unit_col"></td>
+                            <td class="unit_col"><input type="text" class="unit" name="jaundiceUnit" id="" value=""></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">Cyanosis</td>
                             <td class="value_col"><textarea name="Cyanosis" class="value" id="" cols="0" rows="1"></textarea></td>
-                            <td class="unit_col"></td>
+                            <td class="unit_col"><input type="text" class="unit" name="cyanosisUnit" id="" value=""></td>
                         </tr>
 
                         <tr>
                             <td class="oe_col">Oedema</td>
                             <td class="value_col"><textarea name="Oedema" class="value" id="" cols="0" rows="1"></textarea></td>
-                            <td class="unit_col"></td>
+                            <td class="unit_col"><input type="text" class="unit" name="oedemaUnit" id="" value=""></td>
                         </tr>
 
                     </table>
@@ -361,8 +414,9 @@
 
             <div class="mainBar">
 
-                <div >
-                    <table class="med" >
+                <div class="prescriptionDiv">
+
+                    <table class="prescriptionTable" >
                         <tr>
                             <th>No.</th>
                             <th>Brand</th>
@@ -375,7 +429,6 @@
                         <tbody id="table_body">
 
                             <tr class="mainBarTr" >
-                            
                                 <td><input type="text" name="no1" class="no" id="no1" value="1"></td>
                                 <td>
                                     <input type="text" name="brand1" class="brand" id="brand1" placeholder="Medicine........." autocomplete="off">
@@ -493,10 +546,15 @@
 
                     </table>
 
-                    <button type="button" class="btn btn-success btn-sm" onclick="addEntry('table_body');">
+                    
+                    
+                </div>
+
+                    <button type="button" class="btn btn-success btn-sm" id="addmore" >   <!--onclick="addEntry('table_body');"-->
 					    <span class="fa fa-plus"></span>
 				    </button>
-                </div>
+
+                    
 
 
                 <div class="output">
@@ -518,11 +576,20 @@
 
 
     
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
 
 
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/homepage.js"></script>
+    <script type="text/javascript">
+
+    
+
+    </script>
 
     <script type="text/javascript" src="js/addRow.js"></script>
 

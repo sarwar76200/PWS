@@ -1,0 +1,38 @@
+
+.mainOutput{
+    width: 210mm;
+    height: 297mm;
+    background: #b2b719;
+}
+
+.header{
+    padding: 20px;
+    height: 50mm;
+    background: #aa2e2e;
+}
+.patient_Details{
+    height: 25mm;
+    background: #03b8b8;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+
+}
+
+.prescription_Bar{
+    height: 100%;
+    background: #000;
+    display: flex;
+}
+.history_Bar{
+    /* padding: 5px; */
+    height: 100%;
+    width: 120mm;
+    background: #00d146;
+    border-right: 2px solid black;
+
+}
+.prescription_Details{
+    height: 100%;
+    width: 100%;
+    background: #d10076;
+}

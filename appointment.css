@@ -1,6 +1,7 @@
 body{
-	margin: 0;
+    margin: 0;
 }
+/* MenuBar Design start here */
 nav{
 	position: relative;
 	margin: 0px auto 0;
@@ -52,7 +53,7 @@ nav a:nth-child(2):hover~.animation{
 nav a:nth-child(3){
 	width: 120px;
 }
-nav .start-home, a:nth-child(3):hover~.animation{
+nav a:nth-child(3):hover~.animation{
 	width: 120px;
 	left: 230px;
 }
@@ -68,51 +69,9 @@ nav a:nth-child(4):hover~.animation{
 nav a:nth-child(5){
 	width: 100px;
 }
-nav a:nth-child(5):hover~.animation{
+nav .start-home, a:nth-child(5):hover~.animation{
 	width: 100px;
 	left: 410px;
 }
 
 /* MenuBar Design end here */
-
-
-/* Body Design start here */
-
-table{
-	border: 1px solid black;
-	border-collapse: collapse;
-	width: 100%;
-}
-
-th{
-	border: 1px solid black;
-
-}
-td{
-	border: 1px solid black;
-	text-align: center;
-}
-
-
-.id{
-	min-width: 50px;
-}
-.rowID{
-	background: #960000;
-}
-.brandNane{
-	max-width: 80px;
-}
-.dosageType{
-	max-width: 60px;
-}
-.price{
-	min-width: 70px;
-}
-
-
-/* Body Design end here */
-
-
-
-

@@ -212,12 +212,22 @@ nav a:nth-child(5):hover~.animation{
     display: flex;
     min-width: 200px;
     min-height: 20px;
+    max-width: 200px;
     /* text-align: center; */
 }
 .unit_col{
     margin: 0;
     border: 1px solid black;
     min-width: 60px;
+    text-align: center;
+}
+.unit{
+    margin: 0;
+    padding: 5px 4px 0 4px;
+    display: flex;
+    width: 60px;
+    max-width: 60px;
+    min-height: 20px;
     text-align: center;
 }
 
@@ -265,6 +275,25 @@ nav a:nth-child(5):hover~.animation{
     /* background: #50dec1; */
     background: linear-gradient(to right, #58ceb7, #1aa5b1);
 }
+
+
+.prescriptionDiv{
+    /* width: 1050px;
+    height: 200px; */
+
+    /* overflow: hidden;
+    overflow-y: scroll; */
+
+    /* background: #c94343; */
+    border: 1px solid white;
+}
+
+/* .prescriptionTable{
+    border: 1px solid black;
+    width: 1000px; 
+    max-height: 200px;
+
+} */
 
 
 .no{
