@@ -7,8 +7,7 @@ function addEntry(table_id){
 
     table_body.append(tr_clone);
 
-    // clean_first_tr(table_body.firstElementChild);
-
+    clean_first_tr(table_body.lastElementChild);
 
 
 

@@ -701,8 +701,10 @@ $(document).on('click','#instruction5',function(){
     This is for Duration 5 auto complete box
 -------------------*/
 $(document).ready(function(){
+
     /* Autocomplete Textbox */
     $(document).on('click','#duration5',function(){ 
+
         var Duration = $(this).val();
         $.ajax({
             url: "loadDuration.php",
@@ -724,4 +726,36 @@ $(document).ready(function(){
         $('#duration5').val($(this).text());
         $("#DurationList5").fadeOut();
     });
+
+
+    
+
+
+    
+
+
+
+});
+
+
+$('#addmore').click(function(){
+
+    // Get last id 
+    var lastname_id = $('.mainBarTr input[type=text]:nth-child(1)').last().attr('id');
+    var split_id = lastname_id.split('_');
+
+    // New index
+    var index = Number(split_id[1]) + 1;
+    alert (lastname_id);
+
+
+    // Create row with input elements
+    var html = "<tr><td><input type='text' name='no5' class='no' id='no_"+index+"' value='"+index+"'></td><td><input type='text' name='brand5' class='brand' id='brand"+index+"' placeholder='Medicine.........' autocomplete='off'></td><td><input type='text' name='dose5' class='Dose' id='dose"+index+"' placeholder='Dose.........' autocomplete='off'></td><td><input type='text' name='instruction5' class='Instruction' id='instruction"+index+"' placeholder='Instruction.........' autocomplete='off'></td><td><input type='text' name='duration5' class='Duration' id='duration_"+index+"' placeholder='Duration.........' autocomplete='off'></td></tr>";
+    //var html = "<tr class='tr_input'><td><input type='text' class='username' id='username_"+index+"' placeholder='Enter username'></td><td><input type='text' class='name' id='name_"+index+"' ></td><td><input type='text' class='age' id='age_"+index+"' ></td><td><input type='text' class='email' id='email_"+index+"' ></td><td><input type='text' class='salary' id='salary_"+index+"' ></td></tr>";
+
+
+    // Append data
+    $('#table_body').append(html);
+
+
 });
