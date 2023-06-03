@@ -761,51 +761,6 @@ if (isset($_POST['submit_btn']) || isset($Name)) {
 
                     function lol() {
 
-
-                        // console.log(bp);
-                        // console.log(temp);
-                        // console.log(heart);
-                        // console.log(lungs);
-                        // console.log(abd);
-
-
-                        // add_doctor();
-                        // // alert(1);
-                        // // const list = document.getElementsByTagName("iframe")[0];
-                        // let items = new Array();
-
-                        // let doc = document.getElementsByTagName("iframe")[0].contentDocument;
-                        // let x = doc.getElementsByTagName('body')[0].innerHTML;
-
-                        // doc.getElementsByTagName('body')[0].innerHTML = '<b style=""><font size="5">Dr Boro Bhai</font></b>';
-
-                        // let x = doc.getElementsByTagName('body')[0].innerHTML.split('>')[2].split('<')[0].trim();
-                        // console.log(x);
-                        // items.push(x);
-                        // let y = doc.getElementsByTagName('div');
-                        // // console.log(y);
-                        // for (let i = 0; i < y.length; ++i) {
-                        //     if (y[i]) {
-                        //         items.push(y[i]);
-                        //         // y[i].innerHTML = '<font size="4">MBBS, FCPS (Dhaka Medical College)</font>';
-                        //         console.log(y[i].innerHTML);
-                        //     }
-                        // }
-
-                        // for (let i = 0; i < items.length; ++i) {
-                        //     console.log(items[i]);
-                        // }
-
-
-                        // for (let child in y) {
-                        //     if (y[child] != null) {
-                        //         console.log(y[child]).textContent;
-                        //     }
-                        // }
-                        // console.log(y);
-
-
-
                     }
                 </script>
 
