@@ -8,7 +8,10 @@ include("PHPConnect.php");
     -------------------------------------------------------------------------------------*/
 $actual_link = "https://$_SERVER[REQUEST_URI]";
 
-$USER = explode('=', $actual_link)[1];
+$USER = '';
+if (sizeof(explode('=', $actual_link)) > 1) {
+    $USER = explode('=', $actual_link)[1];
+}
 
 $DOC_NAME = '';
 $DOC_EMAIL = '';
@@ -16,9 +19,14 @@ $DOC_EMAIL = '';
 
 $SQL = "SELECT * FROM `user` WHERE `user` = '$USER'";
 $ROW = mysqli_fetch_array(mysqli_query($conn, $SQL));
-$DOC_NAME .= $ROW['fname'];
-$DOC_NAME .= ' ' . $ROW['lname'];
-$DOC_EMAIL .= ' ' . $ROW['email'];
+if ($ROW) {
+    $DOC_NAME .= $ROW['fname'];
+    $DOC_NAME .= ' ' . $ROW['lname'];
+    $DOC_EMAIL .= ' ' . $ROW['email'];
+} else {
+    $DOC_NAME = 'ABC';
+    $DOC_EMAIL = 'abc@yahoo.com';
+}
 
 
 
