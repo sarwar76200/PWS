@@ -23,6 +23,11 @@
         </nav>
     </header>
 
+    <form align="right" action="" method="post">
+        <input type="text" id="search_drug" name="search_drug">
+        <button class="submit" type="submit" name="search_btn">Search</button>
+    </form>
+
 
 
     <table>
@@ -49,6 +54,9 @@
 
         // $query = "SELECT MAX(`Reg`) FROM `prescriptions`";
         $query = "SELECT * FROM `patientdatabase` WHERE 1 ORDER BY `RegNo` DESC LIMIT 50";
+        if (isset($_POST['search_btn'])) {
+            $query = "SELECT * FROM `patientdatabase` WHERE `RegNo` LIKE '%" . $_POST["search_drug"] . "%' OR `Patient_Name` LIKE '%" . $_POST["search_drug"] . "%' ORDER BY `RegNo` DESC LIMIT 50";
+        }
         $result = mysqli_query($conn, $query);
 
 

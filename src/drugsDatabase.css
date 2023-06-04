@@ -104,6 +104,27 @@ td {
 	min-height: 100px;
 }
 
+.button {
+	height: 20px;
+	width: 40px;
+	/* background: #000; */
+	margin-top: -50px;
+	margin-left: 1350px;
+	display: flex;
+	justify-content: center;
+}
+
+.submit {
+	margin: 2px;
+	width: 60px;
+	height: 25px;
+	border: 1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	background-color: gray;
+	color: white
+}
+
 
 .id {
 	min-width: 50px;
