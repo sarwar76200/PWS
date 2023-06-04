@@ -1,0 +1,167 @@
+body{
+    margin: 0;
+}
+/* MenuBar Design start here */
+nav{
+	position: relative;
+	margin: 0px auto 0;
+	width: 100%;
+	height: 30px;
+	background: #34495e;
+	font-size: 0;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+}
+nav a{
+	font-size: 10px;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	line-height: 30px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+nav .animation{
+	position: absolute;
+	/* height: 100%; */
+	height: 3px;
+	/* top: 0; */
+	bottom: 0;
+	z-index: 0;
+	background: #1abc9c;
+	/* border-radius: 8px; */
+	transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1){
+	width: 80px;
+}
+nav a:nth-child(1):hover~.animation{
+	width: 80px;
+	left: 0;
+}
+
+nav a:nth-child(2){
+	width: 150px;
+}
+nav a:nth-child(2):hover~.animation{
+	width: 150px;
+	left: 80px;
+}
+
+nav a:nth-child(3){
+	width: 120px;
+}
+nav a:nth-child(3):hover~.animation{
+	width: 120px;
+	left: 230px;
+}
+
+nav a:nth-child(4){
+	width: 60px;
+}
+nav .start-home,a:nth-child(4):hover~.animation{
+	width: 60px;
+	left: 350px;
+}
+
+nav a:nth-child(5){
+	width: 100px;
+}
+nav a:nth-child(5):hover~.animation{
+	width: 100px;
+	left: 410px;
+}
+
+/* MenuBar Design end here */
+
+/* body design start here */
+
+.thead-dark{
+    background-color: rgb(71, 71, 71);
+    color: aliceblue;
+    border: rgb(71, 71, 71);
+
+    height: 50px;
+    
+}
+.btn-succes{
+    padding: 5px;
+    background: #008b3c;
+    border: 0;
+    border-radius: 10px;
+    height: 25px;
+
+}
+
+table{
+    /* border: 1px solid black; */
+    border-collapse: collapse;
+    
+}
+
+.reg{
+    width: 90px;
+}
+.name{
+    width: 300px;
+}
+.phone{
+    width: 120px;
+}
+.sms{
+    width: 100px;
+}
+th{
+    background: #d80000;
+    border: 2px;
+    width: 150px;
+    padding: 10px;
+}
+
+td{
+    padding: 2px 5px 2px 15px;
+    border: 1px solid black;
+}
+.checkbox{
+    height: 17px;
+    width: 17px;
+}
+
+.Form{
+    height: auto;
+    width: 600px;
+    background: #e5b1b1;
+    margin-left: 50px;
+}
+div{
+    float: left;
+}
+.message{
+    height: auto;
+    width: 570px;
+    background: #904a4a;
+    /* margin-left: 700px; */
+    margin-left: 150px;
+    padding: 10px;
+}
+
+.token{
+    margin: 20px;
+    padding: 10px;
+    width: 500px;
+    height: 30px;
+    border: 2px solid #008b3c;
+    border-radius: 10px;
+}
+.messageBox{
+    margin: 20px;
+    padding: 10px;
+    width: 500px;
+    height: 200px;
+    border: 2px solid #008b3c;
+    border-radius: 10px;  
+}
+
+/* body design end here */

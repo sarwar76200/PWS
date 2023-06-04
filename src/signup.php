@@ -12,6 +12,10 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <link rel="stylesheet" href="CSS/jquery.cleditor.css">
+
+
+
 </head>
 
 <body>
@@ -69,7 +73,7 @@
 
                                 <div>
                                     <?php
-                                    include "connection.php";
+                                    include "PHPConnect.php";
                                     include "hash.php";
 
                                     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -80,9 +84,9 @@
                                         $dob = $_POST['dob'];
                                         $pass = gen_hash($_POST['pass']);
 
-                                        $query = "INSERT INTO `users` VALUES ('$fname', '$lname', '$dob', '$user', '$email', '$pass')";
+                                        $query = "INSERT INTO `user` VALUES ('$fname', '$lname', '$dob', '$user', '$email', '$pass')";
                                         try {
-                                            $result = $connection->query($query);
+                                            $result = $conn->query($query);
                                         } catch (Exception $e) {
                                             echo "<p>User already exists</p>";
                                             exit(0);
@@ -112,6 +116,12 @@
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
 
 </body>
 

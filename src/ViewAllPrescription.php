@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointment</title>
-    <!-- <link rel="stylesheet" href="ViewAllPrescription.css"> -->
+    <title>View Prescription</title>
     <link rel="stylesheet" href="drugsDatabase.css">
+    <!-- <link rel="stylesheet" href="drugsDatabase.css"> -->
 </head>
 
 <body>
@@ -79,7 +79,7 @@
                     <td>" . $mobile . "</td>
                     <td>" . $address . "</td>
                     <td>" . $date . "</td>
-                    <td>" . '<a href="homepage.php?regid=' . $reg . '">Edit</a>' . '&nbsp; &nbsp; &nbsp;<a href="homepage.php?' . $reg . '">Delete</a>' . "</td>
+                    <td>" . '<a href="homepage.php?regid=' . $reg . '">Edit</a>' . '&nbsp; &nbsp; &nbsp;<a href="deletePrescription.php?regid=' . $reg . '">Delete</a>' . "</td>
                     </td></tr></tbody>";
         }
 

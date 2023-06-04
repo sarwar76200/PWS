@@ -1,0 +1,439 @@
+body{
+    margin: 0;
+}
+
+/* MenuBar design Start here */
+nav{
+	position: relative;
+	margin: 0px auto 0;
+	width: 100%;
+	height: 30px;
+	background: #34495e;
+	/* border-radius: 8px; */
+	font-size: 0;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+}
+nav a{
+	font-size: 10px;
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	line-height: 30px;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+nav .animation{
+	position: absolute;
+	/* height: 100%; */
+	height: 3px;
+	/* top: 0; */
+	bottom: 0;
+	z-index: 0;
+	background: #1abc9c;
+	/* border-radius: 8px; */
+	transition: all .5s ease 0s;
+}
+
+nav a:nth-child(1){
+	width: 80px;
+}
+nav .start-home, a:nth-child(1):hover~.animation{
+	width: 80px;
+	left: 0;
+}
+
+nav a:nth-child(2){
+	width: 150px;
+}
+nav a:nth-child(2):hover~.animation{
+	width: 150px;
+	left: 80px;
+}
+
+nav a:nth-child(3){
+	width: 120px;
+}
+nav a:nth-child(3):hover~.animation{
+	width: 120px;
+	left: 230px;
+}
+
+nav a:nth-child(4){
+	width: 60px;
+}
+nav a:nth-child(4):hover~.animation{
+	width: 60px;
+	left: 350px;
+}
+
+nav a:nth-child(5){
+	width: 100px;
+}
+nav a:nth-child(5):hover~.animation{
+	width: 100px;
+	left: 410px;
+}
+
+/* MenuBar design end here */
+
+
+/* Formheder design start here */
+
+.formHead{
+    /* background: #2B7A78; */
+    background: linear-gradient(to right, #2374AB, #2f1e6d);
+    color: white;
+    margin: 0;
+    padding: 2px 10px 2px 10px;
+    width: 1499px;
+    height: auto;
+}
+.name{
+    margin: 2px;
+    padding: 2px;
+    padding-left: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    width: 200px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.age{
+    margin: 2px;
+    padding: 2px;
+    padding-left: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.sex{
+    margin: 2px;
+    padding: 2px;
+    padding-left: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    width: 70px;
+    height: 24px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.address{
+    margin: 2px;
+    padding: 2px;
+    padding-left: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    width: 200px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+.date{
+    margin: 2px;
+    padding: 2px;
+    padding-left: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    width: 120px;
+    height: 22.5px;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.button{
+    height: 45px;
+    width: 100px;
+    /* background: #000; */
+    margin-top: -50px;
+    margin-left: 1350px;
+    display: flex;
+    justify-content: center;
+}
+.submit{
+    margin: 2px;
+    width: 90px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: center;
+    
+}
+
+/* Formheder design end here */
+
+.mainpart{
+    margin-top: 5px;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    background: #2e0884;
+    display: flex;
+    /* justify-content: center; */
+    
+
+}
+
+
+
+
+/* sideBar design start here */
+
+.sideBar{
+    padding: 10px;
+    width: 360px;
+    height: 800px;
+    background: linear-gradient(to right, #1aa5b1, #2987c6);
+}
+
+.oeTable{
+    border-collapse: collapse;
+    border: 1px solid black;
+    /* background: white; */
+}
+
+.oe_col{
+    border: 1px solid black;
+    min-width: 80px;
+    text-align: center;
+}
+.value_col{
+    border: 1px solid black;
+}
+.value{
+    border: none;
+    /* margin: 0 auto; */
+    padding: 5px 4px 0 4px;
+    display: flex;
+    min-width: 200px;
+    min-height: 20px;
+    max-width: 200px;
+    /* text-align: center; */
+}
+.unit_col{
+    margin: 0;
+    border: 1px solid black;
+    min-width: 60px;
+    text-align: center;
+}
+.unit{
+    margin: 0;
+    padding: 5px 4px 0 4px;
+    display: flex;
+    width: 60px;
+    max-width: 60px;
+    min-height: 20px;
+    text-align: center;
+}
+
+
+
+
+
+.OHTable{
+    margin: 20px 0 0 0;
+    border-collapse: collapse;
+    width: 360px;
+    
+}
+.OHTableHead{
+    border: 1px solid black;
+    background: #fff;
+}
+.OHTableBody{
+    border: 1px solid black;
+    
+
+}
+.checkbox{
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightcoral;
+    border-radius: 50px;
+    vertical-align: middle;
+}
+
+
+
+
+
+/* sideBar design end here */
+
+
+/* mainBAr design start here */
+
+
+.mainBar{
+    padding: 10px;
+    width: 1120px;
+    height: 800px;
+    /* background: #50dec1; */
+    background: linear-gradient(to right, #58ceb7, #1aa5b1);
+}
+
+
+.prescriptionDiv{
+    /* width: 1050px;
+    height: 200px; */
+
+    /* overflow: hidden;
+    overflow-y: scroll; */
+
+    /* background: #c94343; */
+    border: 1px solid white;
+}
+
+/* .prescriptionTable{
+    border: 1px solid black;
+    width: 1000px; 
+    max-height: 200px;
+
+} */
+
+
+.no{
+    width: 30px;
+    height: 25px;
+    font-size: large;
+    text-align: center;
+    border: none;
+
+}
+
+.brand{
+    width: 350px;
+    height: 25px;
+    border: none;
+    /* background-color: #ffffff00; */
+}
+
+.MedicineList{
+    /* background: #b15757; */
+    width: 354px;
+    /* height: 30px; */
+    position: absolute;
+    display: none;
+}
+.MedicineList ul{
+    list-style: none;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  
+  }
+.MedicineList ul li{
+    padding: 2px 10px;
+    cursor: pointer;
+}
+.MedicineList ul li:hover{
+    background: #d0e4f4;
+}
+
+.Dose{
+    width: 300px;
+    height: 25px;
+    border: none;
+}
+.DoseList{
+    /* background: #b15757; */
+    width: 304px;
+    /* height: 30px; */
+    position: absolute;
+    display: none;
+}
+.DoseList ul{
+    list-style: none;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  
+  }
+.DoseList ul li{
+    padding: 2px 10px;
+    cursor: pointer;
+}
+.DoseList ul li:hover{
+    background: #d0e4f4;
+}
+
+.Instruction{
+    width: 200px;
+    height: 25px;
+    border: none;
+}
+.InstructionList{
+    /* background: #b15757; */
+    width: 204px;
+    /* height: 30px; */
+    position: absolute;
+    display: none;
+}
+.InstructionList ul{
+    list-style: none;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  
+  }
+.InstructionList ul li{
+    padding: 2px 10px;
+    cursor: pointer;
+}
+.InstructionList ul li:hover{
+    background: #d0e4f4;
+}
+
+.Duration{
+    width: 100px;
+    height: 25px;
+    border: none;
+    
+}
+.DurationList{
+    /* background: #b15757; */
+    width: 104px;
+    /* height: 30px; */
+    position: absolute;
+    display: none;
+}
+.DurationList ul{
+    list-style: none;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  
+  }
+.DurationList ul li{
+    padding: 2px 10px;
+    cursor: pointer;
+}
+.DurationList ul li:hover{
+    background: #d0e4f4;
+}
+
+
+
+
+/* #tableData{
+    background: #bcbcbc;
+    height: 50px;
+    width: 150px;
+} */
+
+/* .med{
+    background-color: #a4bc1a;
+    height: 200px;
+    width: 700px;
+} */
+
+
+/* mainBAr design end here */
