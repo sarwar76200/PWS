@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 02, 2023 at 06:54 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Generation Time: Jun 04, 2023 at 08:18 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `dose` (
   `Dose_ID` int(11) NOT NULL,
   `Dose_Type` varchar(40) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `dose`
@@ -95,7 +95,7 @@ CREATE TABLE `drugs` (
   `Strength` varchar(30) DEFAULT NULL,
   `Pharmaceutical` varchar(50) DEFAULT NULL,
   `Unit_Price` decimal(5,2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `drugs`
@@ -33858,7 +33858,7 @@ INSERT INTO `drugs` (`ID`, `Brand_Name`, `Generic_Name`, `Dosage_Type`, `Strengt
 CREATE TABLE `duration` (
   `Duration_ID` int(11) NOT NULL,
   `Duration_Type` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `duration`
@@ -33892,7 +33892,7 @@ INSERT INTO `duration` (`Duration_ID`, `Duration_Type`) VALUES
 CREATE TABLE `instruction` (
   `Instruction_ID` int(11) NOT NULL,
   `Instruction_Type` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `instruction`
@@ -33913,13 +33913,13 @@ INSERT INTO `instruction` (`Instruction_ID`, `Instruction_Type`) VALUES
 
 CREATE TABLE `patientdatabase` (
   `RegNo` int(10) NOT NULL,
-  `Patient_Name` varchar(20) NOT NULL,
+  `Patient_Name` varchar(50) NOT NULL,
   `Age` int(4) NOT NULL,
   `Sex` varchar(8) NOT NULL,
   `Mobile` varchar(12) NOT NULL,
-  `Address` varchar(20) NOT NULL,
+  `Address` varchar(200) NOT NULL,
   `Date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `patientdatabase`
@@ -33967,7 +33967,50 @@ INSERT INTO `patientdatabase` (`RegNo`, `Patient_Name`, `Age`, `Sex`, `Mobile`, 
 (38, 'Mohaimenul Haque', 0, 'Male', '01761852000', 'Habeli Gopalpur', '2023-06-02'),
 (39, 'Mohaimenul Haque', 22, 'Male', '01761852000', 'Habeli Gopalpur', '2023-06-02'),
 (40, 'Mohaimenul Haque', 22, 'Male', '01761852000', 'Habeli Gopalpur', '2023-06-02'),
-(41, 'Mohaimenul Haque', 22, 'Male', '01761852000', 'Habeli Gopalpur', '2023-06-02');
+(41, 'Mohaimenul Haque', 22, 'Male', '01761852000', 'Habeli Gopalpur', '2023-06-02'),
+(42, 'Sarowar Alam Minhaj', 21, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(43, 'Sarowar Alam Minhaj', 21, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(44, 'Sarowar Alam Minhaj', 12, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(45, 'Sarowar Alam Minhaj', 21, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(46, 'Sarowar Alam Minhaj', 12, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(47, 'Sarowar Alam Minhaj', 21, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(48, 'Sarowar Alam Minhaj', 22, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(49, 'Sarowar Alam Minhaj', 12, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(50, '', 0, 'Male', '', '', '2023-06-03'),
+(51, 'Sarowar Alam Minhaj', 22, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(52, '', 0, 'Male', '', '', '2023-06-03'),
+(53, 'Sarowar Alam Minhaj', 22, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-03'),
+(55, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(56, '', 0, 'Male', '', '', '2023-06-04'),
+(57, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(58, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(59, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(60, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(61, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(62, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(63, '', 0, 'Male', '', '', '2023-06-04'),
+(64, '', 0, 'Male', '', '', '2023-06-04'),
+(65, '', 0, 'Male', '', '', '2023-06-04'),
+(66, '', 0, 'Male', '', '', '2023-06-04'),
+(67, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(68, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(69, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(70, 'Sarowar Alam Minhaj', 0, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(71, 'Sarowar Alam Minhaj', 21, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(72, 'Sarowar Alam Minhaj', 22, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(73, 'SUIII', 12, 'Male', '01874116935', '13/17, Shantinagar B', '2023-06-04'),
+(74, 'Test Patient 1', 23, 'Male', '01111111111', 'Mars', '2023-06-04'),
+(75, 'Sarowar Alam Minhaj', 23, 'Male', '01874116935', '13/17, Shantinagar Bazar Road, Dhaka - 1217', '2023-06-04'),
+(76, 'Sarowar Alam Minhaj', 24, 'Male', '01874116935', '13/17, Shantinagar Bazar Road, Dhaka - 1217', '2023-06-04'),
+(78, 'SUIII2', 12, 'Male', '01874116935', '13/17, Shantinagar Bazar Road, Dhaka - 1217', '2023-06-04'),
+(81, 'Sarowar Alam Minhaj', 50, 'Male', '01874116935', '13/17, Shantinagar Bazar Road, Dhaka - 1217', '2023-06-04'),
+(83, 'Sarowar Alam Minhaj', 50, 'Male', '01874116935', '13/17, Shantinagar Bazar Road, Dhaka - 1217', '2023-06-04'),
+(84, 'Sarowar Alam Minhaj', 50, 'Male', '01874116935', '13/17, Shantinagar Bazar Road, Dhaka - 1217', '2023-06-04'),
+(85, 'Test 2', 50, 'Male', '0000', '1234', '2023-06-04'),
+(86, 'Test 2', 50, 'Male', '0000', '1234', '2023-06-04'),
+(87, 'Test 2', 50, 'Male', '0000', '1234', '2023-06-04'),
+(88, 'Sarowar Alam Minhaj', 22, 'Male', '01874116935', '13/17, Shantinagar Bazar Road, Dhaka - 1217', '2023-06-04'),
+(89, 'Sarowar Alam Minhaj', 22, 'Male', '01874116935', '13/17, Shantinagar Bazar Road, Dhaka - 1217', '2023-06-04');
 
 -- --------------------------------------------------------
 
@@ -33981,7 +34024,7 @@ CREATE TABLE `prescriptiontable` (
   `Dose` varchar(100) NOT NULL,
   `Instruction` varchar(100) NOT NULL,
   `Duration` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `prescriptiontable`
@@ -34069,7 +34112,49 @@ INSERT INTO `prescriptiontable` (`reg_no`, `Medicine`, `Dose`, `Instruction`, `D
 (0, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
 (0, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
 (41, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
-(0, ', , , , ', ', , , , ', ', , , , ', ', , , , ');
+(0, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(42, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(43, 'Napa, , , , ', '১+১+১, , , , ', 'আহারের পর, , , , ', '০৫ দিন, , , , '),
+(44, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(45, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(46, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(47, 'Napa, , , , ', '০+০+১, , , , ', 'খাবারের আগে, , , , ', '০৭ দিন, , , , '),
+(48, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(49, 'Re 20, A Ben  DS  400, , , ', '১+১+১, ০+০+১, , , ', 'খাবারের আগে, খাবারের পর, , , ', '১০ দিন, ১৫ দিন, , , '),
+(50, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(51, 'Naafcal, S Antacid, , , ', '১+১+১, ০+০+১, , , ', 'ঘুমানোর পূর্বে, খাবারের পর, , , ', '১৪ দিন, ১৪ দিন, , , '),
+(52, 'Rosu 20, Naafboost, A B1 100, , ', '১+০+০, ১+১+১, ১+০+০, , ', 'খাবারের আগে, আহারের পর, খাবারের পর, , ', '০৭ দিন, ০৫ দিন, ১৫ দিন, , '),
+(53, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(55, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(56, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(57, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(58, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(59, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(60, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(61, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(62, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(63, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(64, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(65, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(66, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(67, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(68, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(69, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(70, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(71, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(72, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(73, ', , , , ', ', , , , ', ', , , , ', ', , , , '),
+(74, 'Napa   EXTRA, Rabe 20, , , ', '১+১+১, ১+০+০, , , ', 'আহারের পর, খাবারের পর, , , ', '১ মাস, ০৫ দিন, , , '),
+(75, 'Rabe 20$Maxpro 20$$$', '০+০+১$০+০+১$$$', 'খাবারের আগে$খাবারের আগে$$$', '১০ দিন$১৫ দিন$$$'),
+(78, 'Re 20$$$$', '১ টি ট্যাবলেট সকালে খাবেন$$$$', 'ঘুমানোর পূর্বে$$$$', '০৭ দিন$$$$'),
+(81, 'Rabe 20$$$$', '০+০+১$$$$', 'খাবারের আগে$$$$', '০৭ দিন$$$$'),
+(83, 'Rabe 20$$$$', '০+০+১$$$$', 'খাবারের আগে$$$$', '০৭ দিন$$$$'),
+(84, 'Rabe 20$$$$', '০+০+১$$$$', 'খাবারের আগে$$$$', '০৭ দিন$$$$'),
+(85, 'Rabeca 20$R Saline$$$', '১+০+০$১+০+০$$$', 'খাবারের আগে$আহারের পর$$$', '০১ দিন$০৫ দিন$$$'),
+(86, 'Rabeca 20$R Saline$A Ben  DS  400$Sabitar 200$S-32 Gold', '১+০+০$১+০+০$$$', 'খাবারের আগে$আহারের পর$$$', '০১ দিন$০৫ দিন$$$'),
+(87, 'Rabeca 20$R Saline$A Ben  DS  400$Sabitar 200$S-32 Gold', '১+০+০$১+০+০$$$', 'খাবারের আগে$আহারের পর$$$', '০১ দিন$০৫ দিন$$$'),
+(88, 'Napa   EXTRA$$$$', '০+০+১$$$$', 'আহারের পর$$$$', '০১ দিন$$$$'),
+(89, 'Napa   EXTRA$Rabe 20$$$', '০+০+১$$$$', 'আহারের পর$$$$', '০১ দিন$$$$');
 
 -- --------------------------------------------------------
 
@@ -34078,7 +34163,7 @@ INSERT INTO `prescriptiontable` (`reg_no`, `Medicine`, `Dose`, `Instruction`, `D
 --
 
 CREATE TABLE `prescriptiontablehistory` (
-  `History_Id` int(10) NOT NULL,
+  `regNo` int(10) NOT NULL,
   `BP` varchar(20) NOT NULL,
   `BP_Unit` varchar(10) NOT NULL,
   `Pulse` varchar(20) NOT NULL,
@@ -34101,104 +34186,23 @@ CREATE TABLE `prescriptiontablehistory` (
   `Cyanosis_Unit` varchar(10) NOT NULL,
   `Oedema` varchar(20) NOT NULL,
   `Oedema_Unit` varchar(15) NOT NULL,
-  `HO` varchar(100) NOT NULL,
-  `regNo` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `HO` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `prescriptiontablehistory`
 --
 
-INSERT INTO `prescriptiontablehistory` (`History_Id`, `BP`, `BP_Unit`, `Pulse`, `Pulse_Unit`, `Temp`, `Temp_Unit`, `SpO2`, `SpO2_Unit`, `Heart`, `Heart_Unit`, `Lungs`, `Lungs_Unit`, `Abd`, `Abd_Unit`, `Anaemia`, `Anaemia_Unit`, `Janusice`, `Janudice_Unit`, `Cyanosis`, `Cyanosis_Unit`, `Oedema`, `Oedema_Unit`, `HO`, `regNo`) VALUES
-(1, '120/80', 'mmHg', '75', 'b/min', '98.6', '°F', '100', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *COPD *CLD *Smoking', 14),
-(2, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 14),
-(3, '120/80', 'mmHg', '80', 'b/min', '98.6', '°F', '100', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *DM *IHD', 14),
-(4, '120/80', 'mmHg', '80', 'b/min', '98.6', '°F', '100', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *COPD *CLD', 14),
-(5, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *Asthma *CKD', 15),
-(6, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 16),
-(7, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 17),
-(8, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 18),
-(9, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 19),
-(10, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 20),
-(11, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 21),
-(12, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 22),
-(13, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 23),
-(14, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 24),
-(15, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 25),
-(16, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 26),
-(17, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 26),
-(18, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 27),
-(19, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 28),
-(20, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 29),
-(21, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 30),
-(22, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 31),
-(23, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 32),
-(24, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 33),
-(25, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 34),
-(26, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 35),
-(27, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 36),
-(28, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 37),
-(29, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 38),
-(30, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 39),
-(31, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 40),
-(32, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(33, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(34, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(35, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(36, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(37, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(38, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(39, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(40, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(41, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(42, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(43, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(44, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(45, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(46, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(47, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(48, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(49, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(50, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(51, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(52, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(53, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(54, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(55, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(56, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(57, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(58, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(59, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(60, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(61, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(62, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(63, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(64, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(65, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(66, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(67, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(68, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(69, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(70, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(71, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(72, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(73, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(74, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(75, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(76, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(77, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(78, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(79, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(80, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(81, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(82, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(83, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(84, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(85, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(86, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(87, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
-(88, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', '', 41),
-(89, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 0);
+INSERT INTO `prescriptiontablehistory` (`regNo`, `BP`, `BP_Unit`, `Pulse`, `Pulse_Unit`, `Temp`, `Temp_Unit`, `SpO2`, `SpO2_Unit`, `Heart`, `Heart_Unit`, `Lungs`, `Lungs_Unit`, `Abd`, `Abd_Unit`, `Anaemia`, `Anaemia_Unit`, `Janusice`, `Janudice_Unit`, `Cyanosis`, `Cyanosis_Unit`, `Oedema`, `Oedema_Unit`, `HO`) VALUES
+(78, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *COPD'),
+(81, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *DM *Asthma'),
+(83, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *DM *Asthma *COPD *CLD *Depression'),
+(84, '120/80', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *DM *COPD *CLD'),
+(85, '135/75', 'mmHg', '', 'b/min', '97.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *Tobacco Chewing *Allergy *Drug Abuse *Depression'),
+(86, '135/75', 'mmHg', '', 'b/min', '100', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *DM *Asthma *IHD *CKD *CLD *CVD *Smoking *Tobacco Chewing *Malignancy *Psychiatric Disorder *A'),
+(87, '135/75', 'mmHg', '', 'b/min', '100', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *DM *Asthma *IHD *CKD *CLD *CVD *Smoking *Tobacco Chewing *Malignancy *Psychiatric Disorder'),
+(88, '135/75', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *DM *Asthma *COPD *CKD *Smoking *Allergy *Depression'),
+(89, '135/75', 'mmHg', '', 'b/min', '98.6', '°F', '', '%', 'S1+S2+M0', '', 'NAD', '', 'Soft, Non-Tender', '', '', '', '', '', '', '', '', '', ' *HTN *DM *Asthma *COPD *CKD *Smoking *Allergy *Depression');
 
 -- --------------------------------------------------------
 
@@ -34213,14 +34217,16 @@ CREATE TABLE `user` (
   `user` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
   `pass` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`fname`, `lname`, `dob`, `user`, `email`, `pass`) VALUES
-('Mohaimenul', 'Haque', '2001-12-31', 'Mohaimenul', 'haquerion2000@gmail.com', '168f8f26');
+('A', 'B', '2000-06-07', 'ab', 'test', '8fa7de'),
+('Mohaimenul', 'Haque', '2001-12-31', 'Mohaimenul', 'haquerion2000@gmail.com', '168f8f26'),
+('Sarowar', 'Minhaj', '2000-06-07', 'sarwar', 'sarwar76200@gmail.com', '13038029');
 
 --
 -- Indexes for dumped tables
@@ -34260,7 +34266,7 @@ ALTER TABLE `patientdatabase`
 -- Indexes for table `prescriptiontablehistory`
 --
 ALTER TABLE `prescriptiontablehistory`
-  ADD PRIMARY KEY (`History_Id`);
+  ADD PRIMARY KEY (`regNo`);
 
 --
 -- Indexes for table `user`
@@ -34289,12 +34295,6 @@ ALTER TABLE `duration`
 --
 ALTER TABLE `instruction`
   MODIFY `Instruction_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT for table `prescriptiontablehistory`
---
-ALTER TABLE `prescriptiontablehistory`
-  MODIFY `History_Id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
