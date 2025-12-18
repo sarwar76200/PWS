@@ -1,7 +1,7 @@
 <?php
 
 // error_reporting(0);
-// include("PHPConnect.php");
+// include("connection.php");
 // include("homepage.php");
 
 /**----------------------------------------------------------------------------------- 

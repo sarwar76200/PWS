@@ -11,9 +11,9 @@
     
     <header>
         <nav>
-            <a href="homepage.php">Home</a>
-            <a href="ViewAllPrescription.php">View All Prescription</a>
-            <a href="drugsDatabase.php">Drugs Database</a>
+            <a href="index.php">Home</a>
+            <a href="presciptions.php">Prescriptions</a>
+            <a href="drugs.php">Drug Database</a>
             <a href="sms.php">SMS</a>
             <a href="#">Appointment</a>
             <div class="animation start-home"></div>

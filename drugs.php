@@ -1,6 +1,6 @@
 <?php
 
-    include("PHPConnect.php");
+    include("connection.php");
 
 
     $query = "SELECT * FROM drugs LIMIT 500";
@@ -20,16 +20,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PWS - Prescription Generator</title>
     <link rel="stylesheet" href="drugsDatabase.css">
 </head>
 <body>
     
     <header>
         <nav>
-            <a href="homepage.php">Home</a>
-            <a href="ViewAllPrescription.php">View All Prescription</a>
-            <a href="drugsDatabase.php">Drugs Database</a>
+            <a href="index.php">Home</a>
+            <a href="presciptions.php">Prescriptions</a>
+            <a href="drugs.php">Drug Database</a>
             <a href="sms.php">SMS</a>
             <!-- <a href="appointment.php">Appointment</a> -->
             

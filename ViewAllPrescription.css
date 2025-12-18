@@ -1,17 +1,19 @@
-body{
-    margin: 0;
+body {
+	margin: 0;
 }
+
 /* MenuBar Design start here */
-nav{
+nav {
 	position: relative;
 	margin: 0px auto 0;
 	width: 100%;
 	height: 30px;
 	background: #34495e;
 	font-size: 0;
-	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
 }
-nav a{
+
+nav a {
 	font-size: 10px;
 	text-transform: uppercase;
 	color: white;
@@ -22,7 +24,8 @@ nav a{
 	display: inline-block;
 	text-align: center;
 }
-nav .animation{
+
+nav .animation {
 	position: absolute;
 	/* height: 100%; */
 	height: 3px;
@@ -34,42 +37,48 @@ nav .animation{
 	transition: all .5s ease 0s;
 }
 
-nav a:nth-child(1){
+nav a:nth-child(1) {
 	width: 80px;
 }
-nav a:nth-child(1):hover~.animation{
+
+nav a:nth-child(1):hover~.animation {
 	width: 80px;
 	left: 0;
 }
 
-nav a:nth-child(2){
+nav a:nth-child(2) {
 	width: 150px;
 }
-nav .start-home, a:nth-child(2):hover~.animation{
+
+nav .start-home,
+a:nth-child(2):hover~.animation {
 	width: 150px;
 	left: 80px;
 }
 
-nav a:nth-child(3){
+nav a:nth-child(3) {
 	width: 120px;
 }
-nav a:nth-child(3):hover~.animation{
+
+nav a:nth-child(3):hover~.animation {
 	width: 120px;
 	left: 230px;
 }
 
-nav a:nth-child(4){
+nav a:nth-child(4) {
 	width: 60px;
 }
-nav a:nth-child(4):hover~.animation{
+
+nav a:nth-child(4):hover~.animation {
 	width: 60px;
 	left: 350px;
 }
 
-nav a:nth-child(5){
+nav a:nth-child(5) {
 	width: 100px;
 }
-nav a:nth-child(5):hover~.animation{
+
+nav a:nth-child(5):hover~.animation {
 	width: 100px;
 	left: 410px;
 }

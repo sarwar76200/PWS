@@ -1,7 +1,7 @@
 
 <?php
 
-    include('PHPConnect.php'); 
+    include("connection.php");
 
     error_reporting(0);
 
@@ -82,16 +82,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMS</title>
+    <title>PWS - Prescription Generator</title>
     <link rel="stylesheet" href="sms.css">
 </head>
 <body>
     
     <header>
         <nav>
-            <a href="homepage.php">Home</a>
-            <a href="ViewAllPrescription.php">View All Prescription</a>
-            <a href="drugsDatabase.php">Drugs Database</a>
+            <a href="index.php">Home</a>
+            <a href="presciptions.php">Prescriptions</a>
+            <a href="drugs.php">Drug Database</a>
             <a href="sms.php">SMS</a>
             <!-- <a href="appointment.php">Appointment</a> -->
             <div class="animation start-home"></div>
@@ -111,7 +111,7 @@
                             <th class="reg">Reg NO.</th>
                             <th class="name">Name</th>
                             <th class="phone">Phone Number</th>
-                            <th class="sms"><input type="submit" class="btn btn-succes" name="sent_ck_sms" value="SENT SMS"></th>
+                            <th class="sms"><input type="submit" class="btn btn-succes" name="sent_ck_sms" value="SEND SMS"></th>
                         </tr>
                     </thead>
 
@@ -151,8 +151,8 @@
             <div class="message">
         
                 <!-- <label for="">Token : </label> -->
-                <input type="text" name="token" class="token" placeholder="Give Your API Token...................." require><br>
-                <textarea name="messageBox" class="messageBox" placeholder="Write your valuable message...................." require cols="30" rows="10"></textarea>
+                <!-- <input type="text" name="token" class="token" placeholder="Give Your API Token...................." require><br> -->
+                <textarea name="messageBox" class="messageBox" placeholder="Write message here" require cols="30" rows="10"></textarea>
 
             </div>
             

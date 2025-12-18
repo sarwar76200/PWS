@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Prescription</title>
+    <title>PWS - Prescription Generator</title>
     <link rel="stylesheet" href="drugsDatabase.css">
     <!-- <link rel="stylesheet" href="drugsDatabase.css"> -->
 </head>
@@ -15,8 +15,8 @@
     <header>
         <nav>
             <a href="homepage.php">Home</a>
-            <a href="#">View All Prescription</a>
-            <a href="drugsDatabase.php">Drugs Database</a>
+            <a href="#">Prescriptions</a>
+            <a href="drugs.php">Drug Database</a>
             <a href="sms.php">SMS</a>
             <!-- <a href="appointment.php">Appointment</a> -->
             <div class="animation start-home"></div>
@@ -50,7 +50,7 @@
 
         <?php
 
-        include("PHPConnect.php");
+        include("connection.php");
 
         // $query = "SELECT MAX(`Reg`) FROM `prescriptions`";
         $query = "SELECT * FROM `patientdatabase` WHERE 1 ORDER BY `RegNo` DESC LIMIT 50";
@@ -87,7 +87,7 @@
                     <td>" . $mobile . "</td>
                     <td>" . $address . "</td>
                     <td>" . $date . "</td>
-                    <td>" . '<a href="homepage.php?regid=' . $reg . '">Edit</a>' . '&nbsp; &nbsp; &nbsp;<a href="deletePrescription.php?regid=' . $reg . '">Delete</a>' . "</td>
+                    <td>" . '<a href="index.php?regid=' . $reg . '">Edit</a>' . '&nbsp; &nbsp; &nbsp;<a href="deletePrescription.php?regid=' . $reg . '">Delete</a>' . "</td>
                     </td></tr></tbody>";
         }
 
@@ -102,7 +102,8 @@
     <script>
         function ret(reg_id) {
             sessionStorage.setItem("reg_id", reg_id);
-            window.location.href = "homepage.php";
+            localStorage.setItem("reg_id", reg_id);
+            window.location.href = "index.php";
         }
     </script>
 

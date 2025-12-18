@@ -1,5 +1,5 @@
 <?php
-include("PHPConnect.php");
+include("connection.php");
 
 if (isset($_GET['regid'])) {
     $REG_ID = $_GET['regid'];
@@ -10,5 +10,5 @@ if (isset($_GET['regid'])) {
     mysqli_query($conn, $Q2);
     mysqli_query($conn, $Q3);
 
-    header("Location: ViewAllPrescription.php");
+    header("Location: presciptions.php");
 }

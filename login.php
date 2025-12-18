@@ -71,7 +71,7 @@
 											echo '<p>Password incorrect</p>';
 											exit(0);
 										}
-										header("Location: homepage.php?user=" . $user);
+										header("Location: index.php?user=" . $user);
 									}
 
 
