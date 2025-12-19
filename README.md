@@ -29,11 +29,11 @@
    ```bash
    git clone https://github.com/sarwar76200/PWS.git
    ```
-2. Move the project folder to `xampp/htdocs`
+2. Move the `pws` folder to `xampp/htdocs`
 3. Import the database:
 
    * Open `phpMyAdmin`.
-   * Create a new database and import `drugs.sql`.
+   * Create a new database named `pws` and import `drugs.sql`.
 4. Configure the SMS API settings in `sms.php` (If Needed).
 5. Run the project by accessing `http://localhost/pws` in your browser.
 
